@@ -34,7 +34,7 @@ for i in range(len(data1)):
         cikis_tarihi = datetime.combine(tarih, cikis_saati)
         data1.loc[i,"cikis"] = cikis_tarihi
 
-# Giriş ve çıkış tarihlerinin Airtable'ın okuyabileceği bir şekle getirilmesi, iki yeni sütun ile
+# Giriş ve çıkış tarihlerinin Airtable'ın okuyabileceği bir formata getirilmesi
 for i in range(len(data1)):
     data1.loc[i, "giris_airtable"] = str(data1.loc[i,"giris"]).replace(" ","T")+".000Z"
     data1.loc[i, "cikis_airtable"] = str(data1.loc[i,"cikis"]).replace(" ","T")+".000Z"
