@@ -35,7 +35,7 @@ for i in range(len(data)):
 
 
 # Bilgilerin Airtable'a aktarılması
-# Airtable tarih sütunlarında "Include Time" açık olmalı ve "Use the same time zone (GMT) for all collaborators" seçilmelidir.
+# Airtable tarih sütunlarında "Include Time" açık olmalı ve "Use the same time zone (GMT) for all collaborators" seçilmelidir
 for i in range(len(data)):   
     table.create({'Name': str(data.loc[i,"personel_id"]) ,
                     "Giriş Saati" : str(data.loc[i,"giris_airtable"]),   
