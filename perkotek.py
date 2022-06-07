@@ -6,7 +6,7 @@ from pyairtable import Table
 from datetime import datetime
 
 # Excel Dosyalarının Okunması
-giris_cikis = pd.read_excel("PERKOTEK_EXCEL_ÇIKTISI", index_col=None)
+giris_cikis = pd.read_excel("<PERKOTEK_EXCEL_ÇIKTISI_ADRESİ>", index_col=None)
 
 # Tarihe göre filtre yapılması
 data1 = giris_cikis[giris_cikis["tarih"] == "2021-03-01"]
@@ -15,8 +15,8 @@ data1 = giris_cikis[giris_cikis["tarih"] == "2021-03-01"]
 data1.reset_index(drop=True, inplace=True)
 
 # Airtable Bağlantısı
-api_key = "API KEY"
-table = Table(api_key, 'base_id', 'table_id')
+api_key = "<API KEY>"
+table = Table(api_key, '<base_id>', '<table_id>')
 
 # Giriş tarihi ve saatinin kombine edilmesi
 for i in range(len(data1)):
